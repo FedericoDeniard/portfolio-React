@@ -95,7 +95,7 @@ function ContactForm() {
       <div className="submit-area">
         <input className="input submit" type="submit" id="submit" onClick={sendEmail} />
         <label htmlFor="submit" id="submit-img" className="submit-img" onClick={sendEmail}>
-          <img src="src/assets/icons/right.svg" alt="Enviar" />
+          <img src="assets/icons/right.svg" alt="Enviar" />
         </label>
       </div>
     </form>
