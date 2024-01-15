@@ -31,7 +31,8 @@ function App() {
             proyectos desafiantes como
             Chordoku. En constante búsqueda de
             conocimiento</p>
-        <a className="contact-button button" id="contact-button" href="#contact">Contacto</a>
+        <a className="contact-button button" id="contact-button" href="#contact" onContextMenu={(e) =>{
+            e.preventDefault();}}>Contacto</a>
     </section>
     <section className="projects">
         <h2>Proyectos</h2>

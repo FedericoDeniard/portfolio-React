@@ -6,6 +6,9 @@ function Card ({project, evenOrOdd, link, imgSrc, text}) {
         <a className={`card ${project} ${evenOrOdd}`}
             href={link}
             target='_blank'
+            onContextMenu={(e) =>{
+                e.preventDefault();
+            }}
         >
             <h5 className="title cardTitle">{project}</h5>
             <img src={imgSrc} className='image' />
