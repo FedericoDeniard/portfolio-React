@@ -1,0 +1,22 @@
+/* Footer */
+footer div {
+    width: 100px;
+}
+
+.home-area {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+footer div:last-child {
+    display: flex;
+    justify-content: end;
+}

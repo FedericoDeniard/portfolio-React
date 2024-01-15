@@ -1,0 +1,11 @@
+.icon {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+#esp,
+#eng {
+    object-fit: cover;
+    border-radius: 100%;
+}

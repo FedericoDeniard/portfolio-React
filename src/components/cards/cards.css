@@ -1,0 +1,100 @@
+.card {
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 7px 7px 10px 1px #666;
+    border-radius: 10px;
+    margin: 20px;
+    position: relative;
+    user-select: none;
+    scroll-snap-align: none;
+    display: inline-flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.card:first-child {
+    margin-left: 80px;
+}
+
+.card:last-child {
+    margin-right: 80px;
+}
+
+.card:focus {
+    outline: none;
+}
+
+.card h5 {
+    margin: auto;
+    font-size: 40px;
+}
+
+.card img {
+    margin: auto;
+    box-shadow: 5px 5px 10px 2px #000;
+    border-radius: 4px;
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.card p {
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+    text-wrap: wrap;
+    top: 18%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    font-size: 18px;
+    font-weight: 400;
+    text-shadow: .5px .5px rgba(255, 255, 255, .2);
+    color: #000;
+}
+
+.even {
+    background-color: #c0c5e1;
+}
+
+.odd {
+    background-color: #fff399;
+}
+
+
+@media only screen and (min-width: 767px) {
+    .card {
+        scroll-snap-align: center;
+    }
+
+    .card:hover {
+        box-shadow: none;
+        outline: 4px solid #ffcd28;
+        transform: scale3d(1.1, 1.1, 0.3);
+        -webkit-transform: scale3d(1.1, 1.1, 0.3);
+        -moz-transform: scale3d(1.1, 1.1, 0.3);
+        z-index: 100;
+    }
+
+    .card:hover img {
+        transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+
+        opacity: 0.5;
+        box-shadow: none;
+        border: 2px solid #000;
+    }
+
+    .card:hover .cardTitle {
+        font-size: 42px;
+    }
+
+    .card:hover .text {
+        opacity: 1;
+        transform: translateY(10%);
+    }
+}

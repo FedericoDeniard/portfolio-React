@@ -1,0 +1,274 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+
+}
+
+/* Intro */
+
+.myself {
+  width: 250px;
+  height: 250px;
+  margin-top: 40px;
+  /* TODO */
+}
+
+.myself img {
+  object-fit: cover;
+  object-position: 0% 10%;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.pic {
+  box-shadow: 0px 6px 4px 0px #999;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 32px;
+}
+
+h3 {
+  color: #444;
+  font-size: 20px;
+}
+
+p {
+  text-align: center;
+  max-width: 90%;
+  margin-top: 20px;
+  font-size: 20px;
+  color: #444;
+}
+
+.button {
+  margin-top: 20px;
+  height: 60px;
+  width: 250px;
+  border-radius: 10px;
+  font-size: 26px;
+  background-color: #ffec70;
+  box-shadow: 0px 6px 4px 0px #999;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 32px;
+}
+
+/* Projects */
+
+.projects {
+  scroll-snap-type: x mandatory;
+  overflow-x: hidden;
+  will-change: transform;
+  -ms-scroll-snap-type: mandatory;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.cards-container {
+  width: fit-content;
+  max-width: 450px;
+  height: fit-content;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+  overflow-x: scroll;
+  display: flex;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  position: absolute;
+  top: -10000000px;
+}
+
+.container-leftarrow,
+.container-rightarrow {
+  display: none;
+}
+
+/* Skills */
+
+.skills-container {
+  max-width: 600px;
+}
+
+.skills {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 0px 20px;
+}
+
+.skill {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 20px;
+}
+
+.skill input {
+  margin-left: auto;
+}
+
+.range:disabled {
+  max-width: 400px;
+  appearance: none;
+  height: 5px;
+  border-radius: 100px;
+  width: 50vw;
+}
+
+.range:disabled::-webkit-slider-thumb {
+  appearance: none;
+}
+
+.html:disabled {
+  background: linear-gradient(to right,
+      #007bff 0%,
+      #007bff var(--value, 80%),
+      #ccc var(--value, 80%),
+      #ccc 100%);
+}
+
+.css:disabled {
+  background: linear-gradient(to right,
+      #007bff 0%,
+      #007bff var(--value, 70%),
+      #ccc var(--value, 70%),
+      #ccc 100%);
+}
+
+.js:disabled {
+  background: linear-gradient(to right,
+      #007bff 0%,
+      #007bff var(--value, 50%),
+      #ccc var(--value, 50%),
+      #ccc 100%);
+}
+
+.git:disabled {
+  background: linear-gradient(to right,
+      #007bff 0%,
+      #007bff var(--value, 50%),
+      #ccc var(--value, 50%),
+      #ccc 100%);
+}
+
+/* Languages */
+
+.esp:disabled {
+  background: linear-gradient(to right,
+      #007bff 0%,
+      #007bff var(--value, 100%),
+      #ccc var(--value, 100%),
+      #ccc 100%);
+}
+
+.eng:disabled {
+  background: linear-gradient(to right,
+      #007bff 0%,
+      #007bff var(--value, 60%),
+      #ccc var(--value, 60%),
+      #ccc 60%);
+}
+
+
+/* Contact */
+
+.contact-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.email,
+.phone {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.email p,
+.phone p {
+  user-select: text;
+}
+
+.contact {
+  margin-bottom: 60px;
+}
+
+/* Footer */
+
+footer {
+  height: 50px;
+  width: 100%;
+  border-top: 2px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  justify-content: space-between;
+  bottom: 0;
+  position: fixed;
+  background-color: #fff;
+}
+
+
+@media only screen and (min-width: 767px) {
+  .projects {
+    width: fit-content;
+  }
+
+  .cards-container {
+    height: 525px;
+    display: flex;
+    align-items: center;
+  }
+
+  .container-leftarrow,
+  .container-rightarrow {
+    position: absolute;
+    z-index: 200;
+    height: 50px;
+    cursor: pointer;
+    display: initial;
+  }
+
+  .container-leftarrow:hover,
+  .container-rightarrow:hover {
+    transform: scale3d(1.2, 1.2, 1);
+  }
+
+  .container-leftarrow {
+    left: 0%;
+    top: 50%;
+  }
+
+  .container-rightarrow {
+    right: 0%;
+    top: 50%;
+  }
+
+
+}
