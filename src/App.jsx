@@ -22,7 +22,7 @@ function App() {
     <>
     <section className="intro" id="intro">
         <div className="myself">
-            <img id="myself-pic" className="pic" src="./src/assets/me.jpg"/>
+            <img id="myself-pic" className="pic" src="src/assets/me.jpg"/>
         </div>
         <h1>Hola, soy Federico</h1>
         <h3>Frontend developer</h3>
@@ -39,7 +39,7 @@ function App() {
           <Card project="Chordoku"
           evenOrOdd="even"
           link="https://chord-doku.vercel.app/"
-          imgSrc="./src/assets/projects/chordoku.png"
+          imgSrc="src/assets/projects/chordoku.png"
           text="Chordoku es un videojuego musical que desafía tu destreza armónica. En un tablero de
           4x4, tu misión es completar el acorde asignado. Sumérgete en esta experiencia única que fusiona la
           diversión de un juego con la creatividad musical, poniendo a prueba tus habilidades armónicas en
@@ -48,7 +48,7 @@ function App() {
           <Card project="Random Color"
           evenOrOdd="odd"
           link="https://federicodeniard.github.io/cursojs/pages/random-color/index.html"
-          imgSrc= "./src/assets/projects/randomColor.png"
+          imgSrc= "src/assets/projects/randomColor.png"
           text="Random Color es un proyecto con un botón que genera colores de manera aleatoria
           al hacer clic. Muestra el color en pantalla de forma inmediata, ofreciendo una experiencia
           interactiva"
@@ -56,7 +56,7 @@ function App() {
            <Card project="My Page" 
            evenOrOdd="even"
            link="https://federicodeniard.github.io/practice-page/pages/index/index.html"
-           imgSrc="./src/assets/projects/me.jpeg"
+           imgSrc="src/assets/projects/me.jpeg"
            text="My Page es mi espacio personal en línea, donde comparto videos de mis actuaciones
            musicales en vivo. Además, tienes acceso exclusivo a las partituras de mis propios arreglos. Explora
            mi mundo musical a través de interpretaciones en vivo y descubre la música detrás de las partituras."
@@ -64,7 +64,7 @@ function App() {
            <Card project="RGB Selector"
            evenOrOdd="odd"
            link="https://federicodeniard.github.io/cursojs/pages/select-color/index.html"
-           imgSrc="./src/assets/projects/colorSelector.png"
+           imgSrc="src/assets/projects/colorSelector.png"
            text="RGB Selector es una herramienta interactiva con tres controles deslizantes para los
            colores Rojo, Verde y Azul. Ajusta estos controles para mezclar colores y crea una amplia gama de
            tonalidades. El color resultante se muestra en tiempo real como fondo, permitiéndote experimentar y
@@ -73,7 +73,7 @@ function App() {
            <Card project="Quotes"
            evenOrOdd="even"
            link="https://federicodeniard.github.io/cursojs/pages/random-notes/index.html"
-           imgSrc="./src/assets/projects/quotes.png"
+           imgSrc="src/assets/projects/quotes.png"
            text="Quotes es un generador de citas aleatorias de South Park. Con alrededor de 41 frases de
            varios personajes de la serie, simplemente presiona un botón para recibir una de estas divertidas
            citas de forma aleatoria. Una manera entretenida de revivir momentos clásicos de la serie."
@@ -81,21 +81,21 @@ function App() {
            <Card project="Chronometer"
            evenOrOdd="odd"
            link= "https://federicodeniard.github.io/cursojs/pages/timer/index.html"
-           imgSrc="./src/assets/projects/chronometer.png"
+           imgSrc="src/assets/projects/chronometer.png"
            text="Chronometer es una aplicación simple de cronómetro. Ofrece funcionalidad básica para
            medir el tiempo, siendo una herramienta directa y eficiente para diversas situaciones."
            />
            <Card project="To-do List"
            evenOrOdd="even"
            link="https://federicodeniard.github.io/cursojs/pages/todo/index.html"
-           imgSrc="./src/assets/projects/todo.png"
+           imgSrc="src/assets/projects/todo.png"
            text="To-do List es una aplicación sencilla de lista de tareas. Permite organizar y gestionar
            tus tareas pendientes de manera fácil y eficiente. Una herramienta práctica para mantenerse
            organizado en tus actividades diarias."
            />
            </div>
-        <img onClick={scrollLeft} className="container-leftarrow" src="./src/assets/icons/left.svg"/>
-        <img onClick={scrollRight} className="container-rightarrow" src="./src/assets/icons/right.svg"/>
+        <img onClick={scrollLeft} className="container-leftarrow" src="src/assets/icons/left.svg"/>
+        <img onClick={scrollRight} className="container-rightarrow" src="src/assets/icons/right.svg"/>
     </section>
     <section className="skills-container">
         <h2>Habilidades</h2>
