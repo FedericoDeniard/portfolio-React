@@ -120,7 +120,7 @@ function App() {
         <h2>{t("CONTACT")}</h2>
         <div className="contact-info">
             <div className="email">
-                <p>Email: fededeniard@gmail.com</p>
+                <p>{t("EMAIL")}: fededeniard@gmail.com</p>
             </div>
             <div className="phone">
                 <p>{t("PHONE")}: (+54)11 6828-7827</p>
