@@ -18,6 +18,10 @@ body {
   gap: 50px;
 }
 
+.main-body.dark {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 @media only screen and (min-width: 767px) {
   body {
     overflow-x: hidden;

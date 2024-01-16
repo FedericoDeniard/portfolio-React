@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footer.css"
 import FooterIcons from "../footer-icons/icons"
 import { useTranslation } from "react-i18next";
+
+
 function FooterComp (){
   const { i18n } = useTranslation();
   const handleChangeLanguage = (language) => {
@@ -25,6 +27,22 @@ window.open(link, "_blank")
     }
   }
 
+  const [theme, setTheme] = useState(false)
+
+  function applyTheme() {
+    let allElements = document.querySelectorAll('*')
+    if (theme){
+      allElements.forEach(function(element){
+        element.classList.add("dark");
+      })
+    }
+    else{
+      allElements.forEach(function(element){
+        element.classList.remove("dark");
+      })
+    }
+  }
+
     return( <>
         <div className="home-area">
         <FooterIcons id="home" imgSrc="assets/icons/home.svg" onClick={() => window.location.href="#intro"}/>
@@ -37,7 +55,7 @@ window.open(link, "_blank")
         <FooterIcons id="linkedin" imgSrc="assets/icons/linkedin.svg" onClick={() => redirect("https://www.linkedin.com/in/federicodeniard/")}/>
       </div>
       <div>
-        <FooterIcons id="theme" imgSrc="assets/icons/theme.svg" />
+        <FooterIcons id="theme" imgSrc="assets/icons/theme.svg" onClick={() => { setTheme(!theme); applyTheme();console.log(theme); }} />
       </div>
       </>
     )

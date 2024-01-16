@@ -63,3 +63,14 @@
     align-items: center;
 
 }
+
+/* Dark Theme */
+
+.input.dark {
+    color: rgba(140, 140, 140, 1);
+    background-color: transparent;
+}
+
+.submit.dark {
+    color: #fff;
+}
