@@ -85,12 +85,13 @@ h2 {
 .cards-container {
   width: fit-content;
   max-width: 450px;
-  height: fit-content;
+  height: 525px;
   scroll-snap-type: x mandatory;
   white-space: nowrap;
   overflow-x: scroll;
   display: flex;
   scroll-behavior: smooth;
+  align-items: center;
 }
 
 ::-webkit-scrollbar,
@@ -238,12 +239,6 @@ footer {
 @media only screen and (min-width: 767px) {
   .projects {
     width: fit-content;
-  }
-
-  .cards-container {
-    height: 525px;
-    display: flex;
-    align-items: center;
   }
 
   .container-leftarrow,
