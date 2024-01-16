@@ -250,7 +250,7 @@ p.dark {
   color: rgba(190, 190, 190, 0.7);
 }
 
-.myself image.dark,
+.myself .pic.dark,
 .button.dark {
   box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 1);
   background-color: #b3a033;
