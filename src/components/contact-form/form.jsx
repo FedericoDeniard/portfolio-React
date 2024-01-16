@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 
 import './form.css';
+import { useTranslation } from 'react-i18next';
 
 function ContactForm() {
+
+  const { t } = useTranslation();
+
   const [settedName, setName] = useState('');
   const [settedEmail, setEmail] = useState('');
   const [settedPhone, setPhone] = useState('');
@@ -37,63 +41,63 @@ function ContactForm() {
 
   return (
     <form className="contact-form" id="contactform">
-      <label htmlFor="name">*Nombre:</label>
+      <label htmlFor="name">*{t("NAME")}:</label>
       <input
         className="input"
         type="text"
         name="Nombre"
         id="name"
-        placeholder="Nombre"
+        placeholder={t("NAME")}
         value={settedName}
         onChange={(e) => setName(e.target.value)}
         required
       />
       <label htmlFor="email" className="email">
-        *Correo Electrónico:
+        *{t("EMAIL")}
       </label>
       <input
         className="input"
         type="email"
         name="Email"
         id="email"
-        placeholder="Correo Electrónico"
+        placeholder={t("EMAIL")}
         value={settedEmail}
         onChange={(e) => setEmail(e.target.value)}
         required
       />
-      <label htmlFor="phone">Teléfono:</label>
+      <label htmlFor="phone">{t("PHONE")}:</label>
       <input
         className="input"
         type="tel"
         name="Teléfono"
         id="phone"
-        placeholder="Teléfono"
+        placeholder={t("PHONE")}
         value={settedPhone}
         onChange={(e) => setPhone(e.target.value)}
         pattern="[0-9]*"
       />
-      <label htmlFor="subject">*Asunto:</label>
+      <label htmlFor="subject">*{t("SUBJECT")}:</label>
       <input
         className="input"
         type="text"
         name="Asunto"
         id="subject"
-        placeholder="Asunto"
+        placeholder={t("SUBJECT")}
         value={settedSubject}
         onChange={(e) => setSubject(e.target.value)}
         required
       />
-      <label htmlFor="message">*Mensaje:</label>
+      <label htmlFor="message">*{t("MESSAGE")}:</label>
       <textarea
         name="Mensaje"
         id="message"
-        placeholder="Mensaje"
+        placeholder={t("MESSAGE")}
         value={settedMessage}
         required
         onInput={handleInputChange}
       ></textarea>
       <div className="submit-area">
-        <input className="input submit" type="submit" id="submit" onClick={sendEmail} />
+        <input className="input submit" type="submit" id="submit" onClick={sendEmail} value={t("SUBMIT")} />
         <label htmlFor="submit" id="submit-img" className="submit-img" onClick={sendEmail}>
           <img src="assets/icons/right.svg" alt="Enviar" />
         </label>
