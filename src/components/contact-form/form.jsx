@@ -40,7 +40,7 @@ function ContactForm() {
   };
 
   return (
-    <form className="contact-form" id="contactform">
+    <form className="contact-form" id="contactform" netlify>
       <label htmlFor="name">*{t("NAME")}:</label>
       <input
         className="input"
