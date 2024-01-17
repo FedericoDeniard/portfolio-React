@@ -93,15 +93,20 @@ function App() {
             </div>
             <div className="skill">
                 <label htmlFor="CSS-Skill">CSS</label>
-                <input id="CSS-Skill" className="range css" type="range" min="0" max="100" value="70" disabled/>
+                <input id="CSS-Skill" className="range css" type="range" min="0" max="100" value="90" disabled/>
             </div>
             <div className="skill">
                 <label htmlFor="JS-Skill">JS</label>
-                <input id="JS-Skill" className="range js" type="range" min="0" max="100" value="50" disabled/>
+                <input id="JS-Skill" className="range js" type="range" min="0" max="100" value="70" disabled/>
             </div>
             <div className="skill">
                 <label htmlFor="GIT-Skill">GIT</label>
-                <input id="GIT-Skill" className="range git" type="range" min="0" max="100" value="50" disabled/>
+                <input id="GIT-Skill" className="range git" type="range" min="0" max="100" value="65" disabled/>
+            </div>
+            <div className="skill">
+                <label htmlFor="REACT-SKILL">REACT</label>
+                <input id='REACT-Skill' className='range react' type='range' min="0" max="100" value="50" disabled/>
+
             </div>
         </div>
         <h2>{t("LANGUAGES")}</h2>

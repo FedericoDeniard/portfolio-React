@@ -136,7 +136,7 @@ h2 {
 .range:disabled {
   max-width: 400px;
   appearance: none;
-  height: 5px;
+  height: 8px;
   border-radius: 100px;
   width: 50vw;
 }
@@ -156,20 +156,28 @@ h2 {
 .css:disabled {
   background: linear-gradient(to right,
       #007bff 0%,
-      #007bff var(--value, 70%),
-      #ccc var(--value, 70%),
+      #007bff var(--value, 90%),
+      #ccc var(--value, 90%),
       #ccc 100%);
 }
 
 .js:disabled {
   background: linear-gradient(to right,
       #007bff 0%,
-      #007bff var(--value, 50%),
-      #ccc var(--value, 50%),
+      #007bff var(--value, 70%),
+      #ccc var(--value, 70%),
       #ccc 100%);
 }
 
 .git:disabled {
+  background: linear-gradient(to right,
+      #007bff 0%,
+      #007bff var(--value, 65%),
+      #ccc var(--value, 65%),
+      #ccc 100%);
+}
+
+.react:disabled {
   background: linear-gradient(to right,
       #007bff 0%,
       #007bff var(--value, 50%),
