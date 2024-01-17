@@ -93,6 +93,19 @@
 }
 
 
+/* Darl Theme */
+.card.dark {
+    box-shadow: 7px 7px 10px 1px rgba(0, 0, 0, 1);
+}
+
+.even.dark {
+    background-color: #727792;
+}
+
+.odd.dark {
+    background-color: #a0a070;
+}
+
 @media only screen and (min-width: 767px) {
     .card {
         scroll-snap-align: center;
