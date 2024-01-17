@@ -31,7 +31,7 @@ window.open(link, "_blank")
 
   function applyTheme() {
     let allElements = document.querySelectorAll('*')
-    if (theme){
+    if (theme === false){
       allElements.forEach(function(element){
         element.classList.add("dark");
       })
@@ -55,7 +55,7 @@ window.open(link, "_blank")
         <FooterIcons id="linkedin" imgSrc="assets/icons/linkedin.svg" onClick={() => redirect("https://www.linkedin.com/in/federicodeniard/")}/>
       </div>
       <div>
-        <FooterIcons id="theme" imgSrc="assets/icons/theme.svg" onClick={() => { setTheme(!theme); applyTheme();console.log(theme); }} />
+        <FooterIcons id="theme" imgSrc="assets/icons/theme.svg" onClick={() => { setTheme(!theme); applyTheme(); }} />
       </div>
       </>
     )
