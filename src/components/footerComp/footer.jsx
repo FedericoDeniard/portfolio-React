@@ -45,14 +45,14 @@ window.open(link, "_blank")
 
     return( <>
         <div className="home-area">
-        <FooterIcons id="home" imgSrc="assets/icons/home.svg" onClick={() => window.location.href="#intro"}/>
+        <FooterIcons id="home"  imgSrc="assets/icons/home.svg" onClick={() => window.location.href="#intro"}/>
         <FooterIcons className="flag" id="esp" imgSrc={changeFlag()} onClick={() =>
           handleChangeLanguage(i18n.language === "en" ? "es" : "en")
         }/>
       </div>
       <div className="social-media">
-        <FooterIcons id="github" imgSrc="assets/icons/github.svg" onClick={() => redirect("https://github.com/FedericoDeniard")}/>
-        <FooterIcons id="linkedin" imgSrc="assets/icons/linkedin.svg" onClick={() => redirect("https://www.linkedin.com/in/federicodeniard/")}/>
+        <FooterIcons id="github" socialMedia="GitHub" imgSrc="assets/icons/github.svg" onClick={() => redirect("https://github.com/FedericoDeniard")}/>
+        <FooterIcons id="linkedin" socialMedia="LinkedIn" imgSrc="assets/icons/linkedin.svg" onClick={() => redirect("https://www.linkedin.com/in/federicodeniard/")}/>
       </div>
       <div>
         <FooterIcons id="theme" imgSrc="assets/icons/theme.svg" onClick={() => { setTheme(!theme); applyTheme(); }} />
