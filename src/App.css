@@ -9,6 +9,7 @@ section {
 
 /* Intro */
 
+
 .myself {
   width: 250px;
   height: 250px;
@@ -46,29 +47,83 @@ p {
   color: #444;
 }
 
-.button {
-  margin-top: 20px;
-  height: 60px;
-  width: 250px;
-  border-radius: 10px;
-  font-size: 26px;
-  background-color: #ffec70;
-  box-shadow: 0px 6px 4px 0px #999;
-  color: #000;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.button:active {
-  transform: scale(0.95);
-  box-shadow: none;
-}
-
 h2 {
   margin-top: 20px;
   font-size: 32px;
+}
+
+/* Interactive Button */
+
+.interactive-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  margin-top: 15px;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+  transform: rotate(180deg);
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+
+.interactive-button.touch {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(181, 160, 255);
+  align-items: center;
+}
+
+
+.interactive-button.touch .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(200%) rotate(180deg);
+}
+
+.button-text {
+  opacity: 0;
+  color: #fff;
+  position: absolute;
+}
+
+
+.interactive-button.touch .button-text {
+  opacity: 1;
+}
+
+.interactive-button::before {
+  position: absolute;
+  bottom: -20px;
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+
+.interactive-button.touch::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
 }
 
 /* Projects */
@@ -269,6 +324,8 @@ footer.dark {
   background-color: rgba(50, 50, 50, 1);
 }
 
+/* Desktop */
+
 @media only screen and (min-width: 767px) {
   section {
     max-width: 600px;
@@ -302,5 +359,30 @@ footer.dark {
     top: 50%;
   }
 
+  .interactive-button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(181, 160, 255);
+    align-items: center;
+  }
+
+  .interactive-button:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(200%) rotate(180deg);
+  }
+
+  .interactive-button:hover .button-text {
+    opacity: 1;
+  }
+
+  .interactive-button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
 
 }
