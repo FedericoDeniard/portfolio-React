@@ -2,7 +2,7 @@ import "./App.css";
 import Card from "./components/cards/cards";
 import FooterComp from "./components/footerComp/footer";
 import ContactForm from "./components/contact-form/form";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 import { useTranslation } from "react-i18next";
 
@@ -19,19 +19,18 @@ function App() {
     cardsContainer.scrollBy({ left: 300, behavior: "smooth" });
   };
 
-
   // Define is an element is touched
 
   const [isTouched, setIsTouched] = useState(false);
 
   const handleTouchStart = () => {
     setIsTouched(true);
-  }
-    const handleTouchEnd = () => {
+  };
+  const handleTouchEnd = () => {
     setIsTouched(false);
-  }
+  };
 
-  // 
+  //
 
   return (
     <>
@@ -42,12 +41,15 @@ function App() {
         <h1>Hola, soy Federico</h1>
         <h3>Frontend developer</h3>
         <p>{t("MYSELF-DESCRIPTION")}</p>
-        <a className={`interactive-button ${isTouched ? 'touch' : ''}`}  
-        href="#contact" 
-        onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-        onContextMenu={(e) =>{
-            e.preventDefault();}} >
+        <a
+          className={`interactive-button ${isTouched ? "touch" : ""}`}
+          href="#contact"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          onContextMenu={(e) => {
+            e.preventDefault();
+          }}
+        >
           <svg className="svgIcon" viewBox="0 0 384 512">
             <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
           </svg>

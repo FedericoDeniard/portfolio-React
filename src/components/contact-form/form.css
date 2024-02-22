@@ -64,6 +64,14 @@
 
 }
 
+.error {
+    color: #000;
+    background-color: #c0c5e1;
+    padding: 5px;
+    border-radius: 5px;
+    text-shadow: 1px 1px #fff;
+}
+
 /* Dark Theme */
 
 .input.dark {

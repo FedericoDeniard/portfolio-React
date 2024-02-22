@@ -1,46 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
-import './form.css';
-import { useTranslation } from 'react-i18next';
+import "./form.css";
+import { useTranslation } from "react-i18next";
 
 function ContactForm() {
-
   const { t } = useTranslation();
 
-  const [settedName, setName] = useState('');
-  const [settedEmail, setEmail] = useState('');
-  const [settedPhone, setPhone] = useState('');
-  const [settedSubject, setSubject] = useState('');
-  const [settedMessage, setMessage] = useState('');
-
   function autoExpand(textarea) {
-    textarea.style.height = '0';
-    textarea.style.height = textarea.scrollHeight + 'px';
+    textarea.style.height = "0";
+    textarea.style.height = textarea.scrollHeight + "px";
   }
 
   const handleInputChange = (event) => {
-    setMessage(event.target.value);
     autoExpand(event.target);
   };
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const sendEmail = handleSubmit((data) => {
+    const { email, name, phone, subject, body } = data;
     window.Email.send({
-      SecureToken: '07646e85-d00a-4804-8cdd-8f6a646ef7c9',
-      To: 'fededeniard@gmail.com',
-      From: 'fededeniard@gmail.com',
-      Subject: settedSubject,
-      Body: `De: ${settedEmail} <br>
-              Nombre: ${settedName} <br>
-              Teléfono: ${settedPhone} <br>
-              Mensaje: ${settedMessage}`,
+      SecureToken: "07646e85-d00a-4804-8cdd-8f6a646ef7c9",
+      To: "fededeniard@gmail.com",
+      From: "fededeniard@gmail.com",
+      Subject: subject,
+      Body: `De: ${email} <br>
+              Nombre: ${name} <br>
+              Teléfono: ${phone} <br>
+              Mensaje: ${body}`,
     }).then(() =>
-      alert('Tu correo electrónico fue enviado correctamente. ¡Gracias por contactarte!')
+      alert(
+        "Tu correo electrónico fue enviado correctamente. ¡Gracias por contactarte!"
+      )
     );
-  };
+    reset();
+  });
 
   return (
-    <form className="contact-form" id="contactform">
+    <form className="contact-form" id="contactform" onSubmit={sendEmail}>
       <label htmlFor="name">*{t("NAME")}:</label>
       <input
         className="input"
@@ -48,10 +51,13 @@ function ContactForm() {
         name="Nombre"
         id="name"
         placeholder={t("NAME")}
-        value={settedName}
-        onChange={(e) => setName(e.target.value)}
-        required
+        {...register("name", {
+          required: { value: true, message: t("NAME-REQUIRED") },
+          minLength: { value: 2, message: t("NAME-MIN__LENGTH") },
+          maxLength: { value: 20, message: t("NAME-MAX__LENGTH") },
+        })}
       />
+      {errors.name && <span className="error">{errors.name.message}</span>}
       <label htmlFor="email" className="email">
         *{t("EMAIL")}
       </label>
@@ -61,10 +67,15 @@ function ContactForm() {
         name="Email"
         id="email"
         placeholder={t("EMAIL")}
-        value={settedEmail}
-        onChange={(e) => setEmail(e.target.value)}
-        required
+        {...register("email", {
+          required: { value: true, message: t("EMAIL-REQUIRED") },
+          pattern: {
+            value: /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]$/,
+            message: t("EMAIL-INVALID"),
+          },
+        })}
       />
+      {errors.email && <span className="error">{errors.email.message}</span>}
       <label htmlFor="phone">{t("PHONE")}:</label>
       <input
         className="input"
@@ -72,9 +83,10 @@ function ContactForm() {
         name="Teléfono"
         id="phone"
         placeholder={t("PHONE")}
-        value={settedPhone}
-        onChange={(e) => setPhone(e.target.value)}
         pattern="[0-9]*"
+        {...register("phone", {
+          required: { value: false },
+        })}
       />
       <label htmlFor="subject">*{t("SUBJECT")}:</label>
       <input
@@ -83,22 +95,32 @@ function ContactForm() {
         name="Asunto"
         id="subject"
         placeholder={t("SUBJECT")}
-        value={settedSubject}
-        onChange={(e) => setSubject(e.target.value)}
-        required
+        {...register("subject", {
+          required: { value: true, message: t("SUBJECT-REQUIRED") },
+        })}
       />
+      {errors.subject && (
+        <span className="error">{errors.subject.message}</span>
+      )}
       <label htmlFor="message">*{t("MESSAGE")}:</label>
       <textarea
         name="Mensaje"
         id="message"
         placeholder={t("MESSAGE")}
-        value={settedMessage}
-        required
         onInput={handleInputChange}
+        {...register("body", {
+          required: { value: true, message: t("BODY-REQUIRED") },
+        })}
       ></textarea>
+      {errors.body && <span className="error">{errors.body.message}</span>}
       <div className="submit-area">
-        <input className="input submit" type="submit" id="submit" onClick={sendEmail} value={t("SUBMIT")} />
-        <label htmlFor="submit" id="submit-img" className="submit-img" onClick={sendEmail}>
+        <input
+          className="input submit"
+          type="submit"
+          id="submit"
+          value={t("SUBMIT")}
+        />
+        <label htmlFor="submit" id="submit-img" className="submit-img">
           <img src="assets/icons/right.svg" alt="Enviar" />
         </label>
       </div>
