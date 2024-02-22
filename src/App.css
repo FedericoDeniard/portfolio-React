@@ -45,6 +45,7 @@ p {
   margin-top: 20px;
   font-size: 20px;
   color: #444;
+  text-wrap: pretty;
 }
 
 h2 {
