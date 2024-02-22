@@ -16,6 +16,12 @@
     "EMAIL" : "Email",
     "SUBJECT" : "Subject",
     "MESSAGE" : "Message",
-    "SUBMIT" : "Submit"
-    
+    "SUBMIT" : "Submit",
+    "NAME-REQUIRED": "Name is required",
+    "NAME-MIN__LENGTH": "Minimum 2 characters",
+    "NAME-MAX__LENGTH": "Maximum 20 characters",
+    "EMAIL-REQUIRED": "Email is required",
+    "EMAIL-INVALID": "Invalid email format",
+    "SUBJECT-REQUIRED": "Subject is required",
+    "BODY-REQUIRED": "Message is required"    
 }

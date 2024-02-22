@@ -16,6 +16,12 @@
     "EMAIL" : "Correo electrónico",
     "SUBJECT" : "Asunto",
     "MESSAGE" : "Mensaje",
-    "SUBMIT" : "Enviar"
-    
+    "SUBMIT" : "Enviar",
+    "NAME-REQUIRED" : "Nombre es requerido",
+    "NAME-MIN__LENGTH" : "Mínimo 2 caracteres",
+    "NAME-MAX__LENGTH" : "Máximo 20 caracteres",
+    "EMAIL-REQUIRED" : "Correo es requerido",
+    "EMAIL-INVALID" : "Formato de correo inválido",
+    "SUBJECT-REQUIRED" : "Asunto es requerido",
+    "BODY-REQUIRED" : "Mensaje es requerido"
 }
