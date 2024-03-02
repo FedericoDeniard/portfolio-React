@@ -179,7 +179,19 @@ function App() {
               type="range"
               min="0"
               max="100"
-              value="50"
+              value="70"
+              disabled
+            />
+          </div>
+          <div className="skill">
+            <label htmlFor="PYTHON-SKILL">PYTHON</label>
+            <input
+              id="PYTHON-Skill"
+              className="range python"
+              type="range"
+              min="0"
+              max="100"
+              value="30"
               disabled
             />
           </div>

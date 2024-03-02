@@ -236,8 +236,16 @@ h2 {
 .react:disabled {
   background: linear-gradient(to right,
       #007bff 0%,
-      #007bff var(--value, 50%),
-      #ccc var(--value, 50%),
+      #007bff var(--value, 70%),
+      #ccc var(--value, 70%),
+      #ccc 100%);
+}
+
+.python:disabled {
+  background: linear-gradient(to right,
+      #007bff 0%,
+      #007bff var(--value, 30%),
+      #ccc var(--value, 30%),
       #ccc 100%);
 }
 
