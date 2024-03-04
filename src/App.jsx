@@ -67,43 +67,50 @@ function App() {
             text={t("CHORDOKU_TEXT")}
           />
           <Card
-            project="Random Color"
+            project="Rick & Morty"
             evenOrOdd="odd"
+            link="https://federicodeniard.github.io/ApiRick/"
+            imgSrc="assets/projects/rick.png"
+            text={t("RICK_TEXT")}
+          />
+          <Card
+            project="Random Color"
+            evenOrOdd="even"
             link="https://federicodeniard.github.io/cursojs/pages/random-color/index.html"
             imgSrc="assets/projects/randomColor.png"
             text={t("RANDOM-COLOR__TEXT")}
           />
           <Card
             project="My Page"
-            evenOrOdd="even"
+            evenOrOdd="odd"
             link="https://federicodeniard.github.io/practice-page/pages/index/index.html"
             imgSrc="assets/projects/me.jpeg"
             text={t("MY-PAGE__TEXT")}
           />
           <Card
             project="RGB Selector"
-            evenOrOdd="odd"
+            evenOrOdd="even"
             link="https://federicodeniard.github.io/cursojs/pages/select-color/index.html"
             imgSrc="assets/projects/colorSelector.png"
             text={t("RGB-SELECTOR__TEXT")}
           />
           <Card
             project="Quotes"
-            evenOrOdd="even"
+            evenOrOdd="odd"
             link="https://federicodeniard.github.io/cursojs/pages/random-notes/index.html"
             imgSrc="assets/projects/quotes.png"
             text={t("QUOTES-TEXT")}
           />
           <Card
             project="Chronometer"
-            evenOrOdd="odd"
+            evenOrOdd="even"
             link="https://federicodeniard.github.io/cursojs/pages/timer/index.html"
             imgSrc="assets/projects/chronometer.png"
             text={t("CHRONOMETER_TEXT")}
           />
           <Card
             project="To-do List"
-            evenOrOdd="even"
+            evenOrOdd="odd"
             link="https://federicodeniard.github.io/cursojs/pages/todo/index.html"
             imgSrc="assets/projects/todo.png"
             text={t("TODO-LIST__TEXT")}
