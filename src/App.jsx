@@ -115,6 +115,13 @@ function App() {
             imgSrc="assets/projects/todo.png"
             text={t("TODO-LIST__TEXT")}
           />
+          <Card
+            project="Pokedex"
+            evenOrOdd="even"
+            link="https://federicodeniard.github.io/pokedex/"
+            imgSrc="assets/projects/pokedex.png"
+            text={t("POKEDEX-TEXT")}
+          />
         </div>
         <img
           onClick={scrollLeft}
