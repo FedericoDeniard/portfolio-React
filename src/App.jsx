@@ -137,77 +137,29 @@ function App() {
       <section className="skills-container">
         <h2>{t("SKILLS")}</h2>
         <div className="skills-graph skills">
-          <div className="skill">
-            <label htmlFor="HTML-Skill">HTML</label>
-            <input
-              id="HTML-Skill"
-              className="range html"
-              type="range"
-              min="0"
-              max="100"
-              value="80"
-              disabled
-            />
+          <div className="tech-skill">
+            <p className="skill">HTML</p>
+            <img className="skill-img" src="assets/icons/techs/html.svg" />
           </div>
-          <div className="skill">
-            <label htmlFor="CSS-Skill">CSS</label>
-            <input
-              id="CSS-Skill"
-              className="range css"
-              type="range"
-              min="0"
-              max="100"
-              value="90"
-              disabled
-            />
+          <div className="tech-skill">
+            <p className="skill">CSS</p>
+            <img className="skill-img" src="assets/icons/techs/css.svg" />
           </div>
-          <div className="skill">
-            <label htmlFor="JS-Skill">JS</label>
-            <input
-              id="JS-Skill"
-              className="range js"
-              type="range"
-              min="0"
-              max="100"
-              value="70"
-              disabled
-            />
+          <div className="tech-skill">
+            <p className="skill">JS</p>
+            <img className="skill-img" src="assets/icons/techs/js.svg" />
           </div>
-          <div className="skill">
-            <label htmlFor="GIT-Skill">GIT</label>
-            <input
-              id="GIT-Skill"
-              className="range git"
-              type="range"
-              min="0"
-              max="100"
-              value="65"
-              disabled
-            />
+          <div className="tech-skill">
+            <p className="skill">GIT</p>
+            <img className="skill-img" src="assets/icons/techs/git.svg" />
           </div>
-          <div className="skill">
-            <label htmlFor="REACT-SKILL">REACT</label>
-            <input
-              id="REACT-Skill"
-              className="range react"
-              type="range"
-              min="0"
-              max="100"
-              value="70"
-              disabled
-            />
+          <div className="tech-skill">
+            <p className="skill">REACT</p>
+            <img className="skill-img" src="assets/icons/techs/react.svg" />
           </div>
-          <div className="skill">
-            <label htmlFor="PYTHON-SKILL">PYTHON</label>
-            <input
-              id="PYTHON-Skill"
-              className="range python"
-              type="range"
-              min="0"
-              max="100"
-              value="30"
-              disabled
-            />
+          <div className="tech-skill">
+            <p className="skill">PYTHON</p>
+            <img className="skill-img" src="assets/icons/techs/python.svg" />
           </div>
         </div>
         <h2>{t("LANGUAGES")}</h2>

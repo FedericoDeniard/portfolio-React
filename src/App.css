@@ -170,8 +170,6 @@ h2 {
 .skills {
   margin-top: 20px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   gap: 20px;
   padding: 0px 20px;
@@ -181,8 +179,28 @@ h2 {
   font-size: 25px;
   display: flex;
   align-items: center;
+  text-align: center;
   gap: 5px;
   padding: 0px 20px;
+}
+
+.skills-graph {
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech-skill {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 30%;
+}
+
+.skill-img {
+  width: 70px;
+  height: auto;
 }
 
 .skill input {
@@ -199,54 +217,6 @@ h2 {
 
 .range:disabled::-webkit-slider-thumb {
   appearance: none;
-}
-
-.html:disabled {
-  background: linear-gradient(to right,
-      #007bff 0%,
-      #007bff var(--value, 80%),
-      #ccc var(--value, 80%),
-      #ccc 100%);
-}
-
-.css:disabled {
-  background: linear-gradient(to right,
-      #007bff 0%,
-      #007bff var(--value, 90%),
-      #ccc var(--value, 90%),
-      #ccc 100%);
-}
-
-.js:disabled {
-  background: linear-gradient(to right,
-      #007bff 0%,
-      #007bff var(--value, 70%),
-      #ccc var(--value, 70%),
-      #ccc 100%);
-}
-
-.git:disabled {
-  background: linear-gradient(to right,
-      #007bff 0%,
-      #007bff var(--value, 65%),
-      #ccc var(--value, 65%),
-      #ccc 100%);
-}
-
-.react:disabled {
-  background: linear-gradient(to right,
-      #007bff 0%,
-      #007bff var(--value, 70%),
-      #ccc var(--value, 70%),
-      #ccc 100%);
-}
-
-.python:disabled {
-  background: linear-gradient(to right,
-      #007bff 0%,
-      #007bff var(--value, 30%),
-      #ccc var(--value, 30%),
-      #ccc 100%);
 }
 
 /* Languages */
