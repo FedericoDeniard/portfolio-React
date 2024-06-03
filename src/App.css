@@ -176,7 +176,7 @@ h2 {
 }
 
 .skill {
-  font-size: 25px;
+  font-size: 22px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -199,7 +199,7 @@ h2 {
 }
 
 .skill-img {
-  width: 70px;
+  width: 55px;
   height: auto;
 }
 

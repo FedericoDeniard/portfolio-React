@@ -168,6 +168,10 @@ function App() {
           <div className="tech-skill">
             <p className="skill">PYTHON</p>
             <img className="skill-img" src="assets/icons/techs/python.svg" />
+          </div>{" "}
+          <div className="tech-skill">
+            <p className="skill">FLASK</p>
+            <img className="skill-img" src="assets/icons/techs/flask.svg" />
           </div>
         </div>
         <h2>{t("LANGUAGES")}</h2>
