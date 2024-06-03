@@ -60,67 +60,75 @@ function App() {
         <h2>{t("PROJECTS")}</h2>
         <div className="cards-container">
           <Card
-            project="Chordoku"
+            project={t("CHORDOKU_TITLE")}
             evenOrOdd="even"
             link="https://chord-doku.vercel.app/"
             imgSrc="assets/projects/chordoku.png"
             text={t("CHORDOKU_TEXT")}
           />
           <Card
-            project="Rick & Morty"
+            project={t("PAIRS_TITLE")}
             evenOrOdd="odd"
-            link="https://federicodeniard.github.io/ApiRick/"
-            imgSrc="assets/projects/rick.png"
-            text={t("RICK_TEXT")}
+            link="https://federicodeniard.github.io/front-orderer-pairs/"
+            imgSrc="assets/projects/pairs.png"
+            text={t("PAIRS_TEXT")}
           />
+
           <Card
-            project="Random Color"
+            project={t("RANDOM_TITLE")}
             evenOrOdd="even"
             link="https://federicodeniard.github.io/cursojs/pages/random-color/index.html"
             imgSrc="assets/projects/randomColor.png"
             text={t("RANDOM-COLOR__TEXT")}
           />
           <Card
-            project="My Page"
+            project={t("MY-PAGE_TITLE")}
             evenOrOdd="odd"
             link="https://federicodeniard.github.io/practice-page/pages/index/index.html"
             imgSrc="assets/projects/me.jpeg"
             text={t("MY-PAGE__TEXT")}
           />
           <Card
-            project="RGB Selector"
+            project={t("RGB_TITLE")}
             evenOrOdd="even"
             link="https://federicodeniard.github.io/cursojs/pages/select-color/index.html"
             imgSrc="assets/projects/colorSelector.png"
             text={t("RGB-SELECTOR__TEXT")}
           />
           <Card
-            project="Quotes"
+            project={t("QUOTES_TITLE")}
             evenOrOdd="odd"
             link="https://federicodeniard.github.io/cursojs/pages/random-notes/index.html"
             imgSrc="assets/projects/quotes.png"
             text={t("QUOTES-TEXT")}
           />
           <Card
-            project="Chronometer"
+            project={t("CHRONOMETER_TITLE")}
             evenOrOdd="even"
             link="https://federicodeniard.github.io/cursojs/pages/timer/index.html"
             imgSrc="assets/projects/chronometer.png"
             text={t("CHRONOMETER_TEXT")}
           />
           <Card
-            project="To-do List"
+            project={t("TO-DO_TITLE")}
             evenOrOdd="odd"
             link="https://federicodeniard.github.io/cursojs/pages/todo/index.html"
             imgSrc="assets/projects/todo.png"
             text={t("TODO-LIST__TEXT")}
           />
           <Card
-            project="Pokedex"
+            project={t("POKEDEX_TITLE")}
             evenOrOdd="even"
             link="https://federicodeniard.github.io/pokedex/"
             imgSrc="assets/projects/pokedex.png"
             text={t("POKEDEX-TEXT")}
+          />
+          <Card
+            project={t("RICK-MORTY_TITLE")}
+            evenOrOdd="odd"
+            link="https://federicodeniard.github.io/ApiRick/"
+            imgSrc="assets/projects/rick.png"
+            text={t("RICK_TEXT")}
           />
         </div>
         <img
