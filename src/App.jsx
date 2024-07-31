@@ -39,7 +39,7 @@ function App() {
           <img id="myself-pic" className="pic" src="assets/me.jpg" />
         </div>
         <h1>Hola, soy Federico</h1>
-        <h3>Frontend developer</h3>
+        <h3>Fullstack developer</h3>
         <p>{t("MYSELF-DESCRIPTION")}</p>
         <a
           className={`interactive-button ${isTouched ? "touch" : ""}`}
@@ -61,10 +61,17 @@ function App() {
         <div className="cards-container">
           <Card
             project={t("CHORDOKU_TITLE")}
-            evenOrOdd="even"
+            evenOrOdd="odd"
             link="https://chord-doku.vercel.app/"
             imgSrc="assets/projects/chordoku.png"
             text={t("CHORDOKU_TEXT")}
+          />
+          <Card
+            project={t("MEMORY_GAME")}
+            evenOrOdd={"even"}
+            link="https://federicodeniard.github.io/memory_game/"
+            imgSrc={"assets/projects/memory_game.png"}
+            text={t("MEMORY_GAME_TEXT")}
           />
           <Card
             project={t("PAIRS_TITLE")}
