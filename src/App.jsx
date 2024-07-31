@@ -180,6 +180,17 @@ function App() {
             <p className="skill">FLASK</p>
             <img className="skill-img" src="assets/icons/techs/flask.svg" />
           </div>
+          <div className="tech-skill">
+            <p className="skill">SQL</p>
+            <img className="skill-img" src="assets/icons/techs/sql.svg" />
+          </div>
+          <div className="tech-skill">
+            <p className="skill">TypeScript</p>
+            <img
+              className="skill-img"
+              src="assets/icons/techs/typescript.svg"
+            />
+          </div>
         </div>
         <h2>{t("LANGUAGES")}</h2>
         <div className="lang-graph skills">
