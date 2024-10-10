@@ -191,6 +191,10 @@ function App() {
               src="assets/icons/techs/typescript.svg"
             />
           </div>
+          <div className="tech-skill">
+            <p className="skill">Node.Js</p>
+            <img className="skill-img" src="assets/icons/techs/Node.js.svg" />
+          </div>
         </div>
         <h2>{t("LANGUAGES")}</h2>
         <div className="lang-graph skills">
