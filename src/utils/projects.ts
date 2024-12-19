@@ -30,12 +30,6 @@ export const projects = [
         text: "RANDOM-COLOR__TEXT",
     },
     {
-        name: "MY-PAGE_TITLE",
-        link: "https://federicodeniard.github.io/practice-page/pages/index/index.html",
-        imgSrc: "assets/projects/me.jpeg",
-        text: "MY-PAGE__TEXT",
-    },
-    {
         name: "RGB_TITLE",
         link: "https://federicodeniard.github.io/cursojs/pages/select-color/index.html",
         imgSrc: "assets/projects/colorSelector.png",
@@ -73,3 +67,12 @@ export const projects = [
     },
 ]
 
+
+const unusedProjects = [
+    {
+        name: "MY-PAGE_TITLE",
+        link: "https://federicodeniard.github.io/practice-page/pages/index/index.html",
+        imgSrc: "assets/projects/me.jpeg",
+        text: "MY-PAGE__TEXT",
+    },
+]
