@@ -61,10 +61,17 @@ function App() {
         <div className="cards-container">
           <Card
             project={t("CHORDOKU_TITLE")}
-            evenOrOdd="odd"
+            evenOrOdd="even"
             link="https://chord-doku.vercel.app/"
             imgSrc="assets/projects/chordoku.png"
             text={t("CHORDOKU_TEXT")}
+          />
+          <Card
+            project={t("MINIGAMES")}
+            evenOrOdd={"odd"}
+            link="https://federicodeniard.github.io/games/"
+            imgSrc={"assets/projects/minigames.png"}
+            text={t("MINIGAMES_TEXT")}
           />
           <Card
             project={t("MEMORY_GAME")}
