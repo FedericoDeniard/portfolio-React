@@ -5,6 +5,7 @@ import ContactForm from "./components/contact-form/form";
 import React, { useState } from "react";
 
 import { useTranslation } from "react-i18next";
+import { projects } from "./utils/projects";
 
 function App() {
   const { t } = useTranslation();
@@ -59,91 +60,16 @@ function App() {
       <section className="projects">
         <h2>{t("PROJECTS")}</h2>
         <div className="cards-container">
+          {projects.map((project, index) => (
           <Card
-            project={t("CHORDOKU_TITLE")}
-            evenOrOdd="even"
-            link="https://chord-doku.vercel.app/"
-            imgSrc="assets/projects/chordoku.png"
-            text={t("CHORDOKU_TEXT")}
+              key={index}
+              project={t(project.name)}
+              evenOrOdd={index % 2 === 0 ? "even" : "odd"}
+              link={project.link}
+              imgSrc={project.imgSrc}
+              text={t(project.text)}
           />
-          <Card
-            project={t("MINIGAMES")}
-            evenOrOdd={"odd"}
-            link="https://federicodeniard.github.io/games/"
-            imgSrc={"assets/projects/minigames.png"}
-            text={t("MINIGAMES_TEXT")}
-          />
-          <Card
-            project={t("MEMORY_GAME")}
-            evenOrOdd={"even"}
-            link="https://federicodeniard.github.io/memory_game/"
-            imgSrc={"assets/projects/memory_game.png"}
-            text={t("MEMORY_GAME_TEXT")}
-          />
-          <Card
-            project={t("PAIRS_TITLE")}
-            evenOrOdd="odd"
-            link="https://federicodeniard.github.io/front-orderer-pairs/"
-            imgSrc="assets/projects/pairs.png"
-            text={t("PAIRS_TEXT")}
-          />
-
-          <Card
-            project={t("RANDOM_TITLE")}
-            evenOrOdd="even"
-            link="https://federicodeniard.github.io/cursojs/pages/random-color/index.html"
-            imgSrc="assets/projects/randomColor.png"
-            text={t("RANDOM-COLOR__TEXT")}
-          />
-          <Card
-            project={t("MY-PAGE_TITLE")}
-            evenOrOdd="odd"
-            link="https://federicodeniard.github.io/practice-page/pages/index/index.html"
-            imgSrc="assets/projects/me.jpeg"
-            text={t("MY-PAGE__TEXT")}
-          />
-          <Card
-            project={t("RGB_TITLE")}
-            evenOrOdd="even"
-            link="https://federicodeniard.github.io/cursojs/pages/select-color/index.html"
-            imgSrc="assets/projects/colorSelector.png"
-            text={t("RGB-SELECTOR__TEXT")}
-          />
-          <Card
-            project={t("QUOTES_TITLE")}
-            evenOrOdd="odd"
-            link="https://federicodeniard.github.io/cursojs/pages/random-notes/index.html"
-            imgSrc="assets/projects/quotes.png"
-            text={t("QUOTES-TEXT")}
-          />
-          <Card
-            project={t("CHRONOMETER_TITLE")}
-            evenOrOdd="even"
-            link="https://federicodeniard.github.io/cursojs/pages/timer/index.html"
-            imgSrc="assets/projects/chronometer.png"
-            text={t("CHRONOMETER_TEXT")}
-          />
-          <Card
-            project={t("TO-DO_TITLE")}
-            evenOrOdd="odd"
-            link="https://federicodeniard.github.io/cursojs/pages/todo/index.html"
-            imgSrc="assets/projects/todo.png"
-            text={t("TODO-LIST__TEXT")}
-          />
-          <Card
-            project={t("POKEDEX_TITLE")}
-            evenOrOdd="even"
-            link="https://federicodeniard.github.io/pokedex/"
-            imgSrc="assets/projects/pokedex.png"
-            text={t("POKEDEX-TEXT")}
-          />
-          <Card
-            project={t("RICK-MORTY_TITLE")}
-            evenOrOdd="odd"
-            link="https://federicodeniard.github.io/ApiRick/"
-            imgSrc="assets/projects/rick.png"
-            text={t("RICK_TEXT")}
-          />
+          ))}
         </div>
         <img
           onClick={scrollLeft}
