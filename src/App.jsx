@@ -40,8 +40,8 @@ function App() {
         <div className="myself">
           <img id="myself-pic" className="pic" src="assets/me.jpg" />
         </div>
-        <h1>Hola, soy Federico</h1>
-        <h3>Fullstack developer</h3>
+        <h1>{t("INTRODUCTION")}</h1>
+        <h3>{t("FULLSTACK-DEVELOPER")}</h3>
         <p>{t("MYSELF-DESCRIPTION")}</p>
         <a
           className={`interactive-button ${isTouched ? "touch" : ""}`}
@@ -96,7 +96,7 @@ function App() {
         <h2>{t("LANGUAGES")}</h2>
         <div className="lang-graph skills">
           <div className="skill">
-            <label htmlFor="ESP-Skill">ESP</label>
+            <label htmlFor="ESP-Skill">{t("SPANISH")}</label>
             <input
               id="ESP-Skill"
               className="range esp"
@@ -108,7 +108,7 @@ function App() {
             />
           </div>
           <div className="skill">
-            <label htmlFor="ENG-Skill">ENG</label>
+            <label htmlFor="ENG-Skill">{t("ENGLISH")}</label>
             <input
               id="ENG-Skill"
               className="range eng"

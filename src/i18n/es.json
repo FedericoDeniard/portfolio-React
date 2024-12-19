@@ -1,6 +1,8 @@
 {
+  "INTRODUCTION": "Hola, soy Federico",
   "CONTACT": "Contacto",
-  "MYSELF-DESCRIPTION": "Desarrollador FullStack apasionado y autodidacta, con experiencia en proyectos desafiantes como Chordoku. En constante búsqueda de conocimiento",
+  "FULLSTACK-DEVELOPER": "Desarrollador FullStack",
+  "MYSELF-DESCRIPTION": "Desarrollador FullStack apasionado, con experiencia en proyectos desafiantes como Chordoku. En constante búsqueda de conocimiento",
   "PROJECTS": "Proyectos",
   "CHORDOKU_TITLE": "Chordoku",
   "MINIGAMES": "Mini-juegos",
@@ -40,5 +42,7 @@
   "EMAIL-REQUIRED": "Correo es requerido",
   "EMAIL-INVALID": "Formato de correo inválido",
   "SUBJECT-REQUIRED": "Asunto es requerido",
-  "BODY-REQUIRED": "Mensaje es requerido"
+  "BODY-REQUIRED": "Mensaje es requerido",
+  "SPANISH": "Español",
+  "ENGLISH": "Inglés"
 }
