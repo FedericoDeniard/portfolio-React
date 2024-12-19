@@ -6,6 +6,7 @@ import React, { useState } from "react";
 
 import { useTranslation } from "react-i18next";
 import { projects } from "./utils/projects";
+import { skills } from "./utils/skills";
 
 function App() {
   const { t } = useTranslation();
@@ -85,49 +86,12 @@ function App() {
       <section className="skills-container">
         <h2>{t("SKILLS")}</h2>
         <div className="skills-graph skills">
-          <div className="tech-skill">
-            <p className="skill">HTML</p>
-            <img className="skill-img" src="assets/icons/techs/html.svg" />
+          {skills.map((skill, index) => (
+            <div className="tech-skill" key={index}>
+              <p className="skill">{t(skill.name)}</p>
+              <img className="skill-img" src={skill.img} />
           </div>
-          <div className="tech-skill">
-            <p className="skill">CSS</p>
-            <img className="skill-img" src="assets/icons/techs/css.svg" />
-          </div>
-          <div className="tech-skill">
-            <p className="skill">JS</p>
-            <img className="skill-img" src="assets/icons/techs/js.svg" />
-          </div>
-          <div className="tech-skill">
-            <p className="skill">GIT</p>
-            <img className="skill-img" src="assets/icons/techs/git.svg" />
-          </div>
-          <div className="tech-skill">
-            <p className="skill">REACT</p>
-            <img className="skill-img" src="assets/icons/techs/react.svg" />
-          </div>
-          <div className="tech-skill">
-            <p className="skill">PYTHON</p>
-            <img className="skill-img" src="assets/icons/techs/python.svg" />
-          </div>{" "}
-          <div className="tech-skill">
-            <p className="skill">FLASK</p>
-            <img className="skill-img" src="assets/icons/techs/flask.svg" />
-          </div>
-          <div className="tech-skill">
-            <p className="skill">SQL</p>
-            <img className="skill-img" src="assets/icons/techs/sql.svg" />
-          </div>
-          <div className="tech-skill">
-            <p className="skill">TypeScript</p>
-            <img
-              className="skill-img"
-              src="assets/icons/techs/typescript.svg"
-            />
-          </div>
-          <div className="tech-skill">
-            <p className="skill">Node.Js</p>
-            <img className="skill-img" src="assets/icons/techs/Node.js.svg" />
-          </div>
+          ))}
         </div>
         <h2>{t("LANGUAGES")}</h2>
         <div className="lang-graph skills">
