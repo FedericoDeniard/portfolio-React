@@ -44,5 +44,6 @@
   "SUBJECT-REQUIRED": "Subject is required",
   "BODY-REQUIRED": "Message is required",
   "SPANISH": "Spanish",
-  "ENGLISH": "English"
+  "ENGLISH": "English",
+  "SEND": "Send"
 }

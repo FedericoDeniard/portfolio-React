@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { projects } from "./utils/projects";
 import { skills } from "./utils/skills";
+import { Chat } from "./components/chat/chat";
 
 function App() {
   const { t } = useTranslation();
@@ -132,6 +133,7 @@ function App() {
           </div>
         </div>
         <ContactForm />
+        <Chat></Chat>
       </section>
       <footer>
         <FooterComp />

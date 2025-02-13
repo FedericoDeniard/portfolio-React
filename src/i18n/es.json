@@ -44,5 +44,6 @@
   "SUBJECT-REQUIRED": "Asunto es requerido",
   "BODY-REQUIRED": "Mensaje es requerido",
   "SPANISH": "Español",
-  "ENGLISH": "Inglés"
+  "ENGLISH": "Inglés",
+  "SEND": "Enviar"
 }
