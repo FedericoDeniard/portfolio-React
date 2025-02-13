@@ -1,6 +1,7 @@
 import { CoreMessage, generateId, generateText, GenerateTextResult, ToolSet } from "ai";
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { KEYS } from "../config/keys";
+import Prompts from "./SystemPrompt.json"
 
 export const sendMessageToAI = async ({ messages }: { messages: CoreMessage[] }) => {
     const google = createGoogleGenerativeAI({ apiKey: KEYS.GEMINI_API_KEY });
@@ -8,7 +9,7 @@ export const sendMessageToAI = async ({ messages }: { messages: CoreMessage[] })
 
     const response = await generateText({
         model,
-        system: "You are a assistant that shows and answer questions about my projects. Recruiters are going to ask you questions about my projects. I'm a fullstack software developer looking for a job. You can get more information about my projects on the tools.",
+        system: Prompts.SystemPrompt,
         messages: messages,
     })
 
