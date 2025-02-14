@@ -76,7 +76,6 @@ export const Chat = () => {
           className="chat-input"
           placeholder={t("BODY-REQUIRED")}
           value={userMessage?.content || ""}
-          defaultValue={""}
           onChange={(e) => handleSetUserMessage(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
