@@ -45,5 +45,7 @@
   "BODY-REQUIRED": "Message is required",
   "SPANISH": "Spanish",
   "ENGLISH": "English",
-  "SEND": "Send"
+  "SEND": "Send",
+  "LEARN-MORE": "Learn more",
+  "HIDE": "Hide"
 }
