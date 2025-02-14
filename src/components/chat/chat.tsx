@@ -7,7 +7,11 @@ import { CoreMessage, CoreUserMessage } from "ai";
 export const Chat = () => {
   const { t } = useTranslation();
 
-  const [userMessage, setUserMessage] = useState<Message>();
+  const [userMessage, setUserMessage] = useState<Message>({
+    role: "user",
+    content: "",
+    time: undefined,
+  });
   const [chatHistory, setChatHistory] = useState<Message[]>([]);
 
   const [waitingResponse, setWaitingResponse] = useState<boolean>(false);
@@ -23,7 +27,7 @@ export const Chat = () => {
   };
 
   const handleSendUserMessage = async () => {
-    if (userMessage) {
+    if (userMessage?.content !== "") {
       setWaitingResponse(true);
       const updatedChatHistory = [
         ...chatHistory,
@@ -72,6 +76,7 @@ export const Chat = () => {
           className="chat-input"
           placeholder={t("BODY-REQUIRED")}
           value={userMessage?.content || ""}
+          defaultValue={""}
           onChange={(e) => handleSetUserMessage(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
