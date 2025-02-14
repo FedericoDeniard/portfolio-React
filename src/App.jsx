@@ -64,14 +64,14 @@ function App() {
         <h2>{t("PROJECTS")}</h2>
         <div className="cards-container">
           {projects.map((project, index) => (
-          <Card
+            <Card
               key={index}
               project={t(project.name)}
               evenOrOdd={index % 2 === 0 ? "even" : "odd"}
               link={project.link}
               imgSrc={project.imgSrc}
               text={t(project.text)}
-          />
+            />
           ))}
         </div>
         <img
@@ -92,7 +92,7 @@ function App() {
             <div className="tech-skill" key={index}>
               <p className="skill">{t(skill.name)}</p>
               <img className="skill-img" src={skill.img} />
-          </div>
+            </div>
           ))}
         </div>
         <h2>{t("LANGUAGES")}</h2>
@@ -103,16 +103,16 @@ function App() {
                 <label htmlFor={`${languageKey}-Skill`}>
                   {t(languages[languageKey].i18n)}
                 </label>
-            <input
+                <input
                   id={`${languageKey}-Skill`}
                   className={`range ${languageKey.toLocaleLowerCase()}`}
-              type="range"
-              min="0"
-              max="100"
+                  type="range"
+                  min="0"
+                  max="100"
                   value={languages[languageKey].level}
-              disabled
-            />
-          </div>
+                  disabled
+                />
+              </div>
             );
           })}
         </div>
@@ -123,9 +123,9 @@ function App() {
           <div className="email">
             <p>{t("EMAIL")}: fededeniard@gmail.com</p>
           </div>
-          <div className="phone">
+          {/* <div className="phone">
             <p>{t("PHONE")}: (+54)11 6828-7827</p>
-          </div>
+          </div> */}
         </div>
         <ContactForm />
         <Chat></Chat>
