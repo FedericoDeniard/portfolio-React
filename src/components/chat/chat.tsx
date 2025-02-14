@@ -73,7 +73,12 @@ export const Chat = () => {
           placeholder={t("BODY-REQUIRED")}
           value={userMessage?.content || ""}
           onChange={(e) => handleSetUserMessage(e.target.value)}
-        ></input>
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleSendUserMessage();
+            }
+          }}
+        />
         <button
           className="chat-send"
           disabled={userMessage === undefined || waitingResponse}
