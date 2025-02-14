@@ -1,9 +1,10 @@
-import { CoreMessage, generateId, generateText, GenerateTextResult, ToolSet } from "ai";
+import { CoreMessage, generateId, generateText, GenerateTextResult, tool, ToolSet } from "ai";
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { KEYS } from "../config/keys";
 import Prompts from "./SystemPrompt.json"
+import { AiTools, AiToolsType } from "./tools";
 
-export const sendMessageToAI = async ({ messages }: { messages: CoreMessage[] }) => {
+export const sendMessageToAI = async ({ messages }: { messages: CoreMessage[] }): Promise<GenerateTextResult<AiToolsType, never>> => {
     const google = createGoogleGenerativeAI({ apiKey: KEYS.GEMINI_API_KEY });
     const model = google("gemini-1.5-flash");
 
@@ -11,21 +12,13 @@ export const sendMessageToAI = async ({ messages }: { messages: CoreMessage[] })
         model,
         system: Prompts.SystemPrompt,
         messages: messages,
+        maxSteps: 5,
+        tools: AiTools,
     })
-
     return response
 }
 
-export const getAIResponse = ({ response }: { response: GenerateTextResult<ToolSet, never> }) => {
-    return response.text
-}
-
-export const createChat = () => {
-    // TODO A cookie would be more secure
-    let id = sessionStorage.getItem("ChatId");
-    if (!id) {
-        id = generateId();
-        sessionStorage.setItem("ChatId", id);
-    }
-    return id;
+export const getAIResponse = ({ response }: { response: GenerateTextResult<AiToolsType, never> }) => {
+    const text = response.text
+    return text
 }
