@@ -40,6 +40,19 @@ export const AiTools = {
                 };
             });
         }
+    }),
+    getAboutMe: tool({
+        description: "Provides localized personal profile information including professional role and self-description. Returns essential contact data and bio optimized for recruitment contexts with automatic language adaptation (en/es).",
+        parameters: z.object({ language: z.enum(["en", "es"]).describe("Localization target: English (en) for international tech terms, Spanish (es) for LATAM market contexts") }),
+        execute: async ({ language }: { language: "en" | "es" }) => {
+            let translation = language === "en" ? en : es
+            return {
+                name: "Federico Deniard",
+                email: "fededeniard@gmail.com",
+                role: translation["FULLSTACK-DEVELOPER"],
+                description: translation["MYSELF-DESCRIPTION"]
+            }
+        }
     })
 }
 
