@@ -29,6 +29,7 @@ export const Chat = () => {
         ...chatHistory,
         { ...userMessage, time: new Date() },
       ];
+      setUserMessage({ role: "user", content: "", time: undefined });
       setChatHistory(updatedChatHistory);
       const messages: CoreMessage[] = updatedChatHistory.map((message) => {
         return {
@@ -40,7 +41,6 @@ export const Chat = () => {
         messages: messages,
       });
       const message = getAIResponse({ response });
-      setUserMessage({ role: "user", content: "", time: undefined });
       setChatHistory([
         ...updatedChatHistory,
         { role: "assistant", content: message, time: new Date() },
