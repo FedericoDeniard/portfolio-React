@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import { projects } from "./utils/projects";
 import { skills } from "./utils/skills";
 import { Chat } from "./components/chat/chat";
+import { languages } from "./utils/languages";
 
 function App() {
   const { t } = useTranslation();
@@ -96,30 +97,24 @@ function App() {
         </div>
         <h2>{t("LANGUAGES")}</h2>
         <div className="lang-graph skills">
-          <div className="skill">
-            <label htmlFor="ESP-Skill">{t("SPANISH")}</label>
+          {Object.keys(languages).map((languageKey) => {
+            return (
+              <div className="skill" key={languageKey}>
+                <label htmlFor={`${languageKey}-Skill`}>
+                  {t(languages[languageKey].i18n)}
+                </label>
             <input
-              id="ESP-Skill"
-              className="range esp"
+                  id={`${languageKey}-Skill`}
+                  className={`range ${languageKey.toLocaleLowerCase()}`}
               type="range"
               min="0"
               max="100"
-              value="100"
+                  value={languages[languageKey].level}
               disabled
             />
           </div>
-          <div className="skill">
-            <label htmlFor="ENG-Skill">{t("ENGLISH")}</label>
-            <input
-              id="ENG-Skill"
-              className="range eng"
-              type="range"
-              min="0"
-              max="100"
-              value="60"
-              disabled
-            />
-          </div>
+            );
+          })}
         </div>
       </section>
       <section className="contact" id="contact">
