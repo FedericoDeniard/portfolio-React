@@ -4,6 +4,7 @@ import { skills } from "../utils/skills";
 import { projects } from "../utils/projects";
 import en from "../i18n/en.json";
 import es from "../i18n/es.json";
+import { languages } from "../utils/languages";
 
 export const AiTools = {
     getSkills: tool({
@@ -25,6 +26,19 @@ export const AiTools = {
                 text: translation[project.text as keyof typeof translation]
             }));
             return projectsTranslated
+        }
+    }),
+    getLanguages: tool({
+        description: "Retrieves structured list of languages and their proficiency levels. Returns array formatted for technical recruiter analysis.",
+        parameters: z.object({}),
+        execute: async () => {
+            return Object.keys(languages).map((languageKey) => {
+                const key = languageKey as keyof typeof languages;
+                return {
+                    name: languages[key].name,
+                    level: languages[key].level
+                };
+            });
         }
     })
 }

@@ -1,13 +1,16 @@
 export const languages = {
     "ESP": {
         name: "English",
-        level: 60,
+        percentage: 60,
         i18n: "ENGLISH",
+        level: "Intermediate"
+
     },
     "ENG": {
         name: "Spanish",
-        level: 100,
-        i18n: "SPANISH"
+        percentage: 100,
+        i18n: "SPANISH",
+        level: "Native"
 
     }
 }

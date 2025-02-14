@@ -109,7 +109,7 @@ function App() {
                   type="range"
                   min="0"
                   max="100"
-                  value={languages[languageKey].level}
+                  value={languages[languageKey].percentage}
                   disabled
                 />
               </div>
