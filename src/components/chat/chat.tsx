@@ -2,8 +2,9 @@ import { useTranslation } from "react-i18next";
 import "./chat.css";
 import { useState } from "react";
 import { getAIResponse, sendMessageToAI } from "../../services/vercel-ai";
-import { set } from "react-hook-form";
-import { CoreMessage, CoreUserMessage } from "ai";
+import { CoreMessage } from "ai";
+import { ProjectTool } from "../tool-components/projects/project";
+import { projects } from "../../utils/projects";
 export const Chat = () => {
   const { t } = useTranslation();
 
@@ -57,6 +58,7 @@ export const Chat = () => {
     <div className="chat-container">
       <h1>Chat</h1>
       <div className="chat">
+        <ProjectTool project={projects} />
         {chatHistory.map((message, index) => {
           return (
             <>
