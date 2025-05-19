@@ -6,7 +6,7 @@ export const projects = [
         text: "CHORDOKU_TEXT",
     }, {
         name: "SCRAPPER_TITLE",
-        link: "scrapperdiarios.up.railway.app",
+        link: "https://scrapperdiarios.up.railway.app/",
         imgSrc: "assets/projects/diarios.png",
         text: "SCRAPPER_TEXT",
     },
