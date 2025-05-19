@@ -4,6 +4,11 @@ export const projects = [
         link: "https://chord-doku.vercel.app/",
         imgSrc: "assets/projects/chordoku.png",
         text: "CHORDOKU_TEXT",
+    }, {
+        name: "SCRAPPER_TITLE",
+        link: "scrapperdiarios.up.railway.app",
+        imgSrc: "assets/projects/diarios.png",
+        text: "SCRAPPER_TEXT",
     },
     {
         name: "MINIGAMES",

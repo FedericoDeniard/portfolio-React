@@ -16,6 +16,10 @@ export const skills = [
         img: 'assets/icons/techs/js.svg',
     },
     {
+        name: "Go",
+        img: "assets/icons/techs/go.svg",
+    },
+    {
         name: 'PYTHON',
         img: 'assets/icons/techs/python.svg',
     },
