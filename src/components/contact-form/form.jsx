@@ -59,7 +59,7 @@ function ContactForm() {
       />
       {errors.name && <span className="error">{errors.name.message}</span>}
       <label htmlFor="email" className="email">
-        *{t("EMAIL")}
+        *{t("EMAIL")}:
       </label>
       <input
         className="input"
